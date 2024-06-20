@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Paris",
+    "lat": "48.85341",
+    "lng": "2.3488",
+    "country": "FR",
+    "admin1": "11",
+    "admin2": "75"
+  },
+  {
+    "name": "London",
+    "lat": "51.50853",
+    "lng": "-0.12574",
+    "country": "GB",
+    "admin1": "ENG",
+    "admin2": "GLA"
+  },
+  {
+    "name": "Berlin",
+    "lat": "52.52437",
+    "lng": "13.41053",
+    "country": "DE",
+    "admin1": "16",
+    "admin2": "00"
+  },
+  {
+  "name": "Istanbul",
+  "lat": "41.01384",
+  "lng": "28.94966",
+  "country": "TR",
+  "admin1": "34",
+  "admin2": ""
+  },
+  {
+    "name": "Sydney",
+    "lat": "-33.86785",
+    "lng": "151.20732",
+    "country": "AU",
+    "admin1": "02",
+    "admin2": ""
+  },
+  {
+    "name": "Shanghai",
+    "lat": "31.22222",
+    "lng": "121.45806",
+    "country": "CN",
+    "admin1": "23",
+    "admin2": "12324204"
+  }
+]
