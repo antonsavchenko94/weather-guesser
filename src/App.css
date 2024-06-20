@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.guessList, .results {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.guessList h3, .results h2 {
+  margin-bottom: 10px;
+}
+
+.guesses, .results {
+  list-style-type: none;
+  padding: 0;
+}
+
+.guesses li, .results li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 20px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  input[type="number"], .btn {
+    padding: 8px;
+    font-size: 14px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
