@@ -19,8 +19,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
-#env:
-#  VITE_GOOGLE_MAP_API_KEY: ${{ secrets.VITE_GOOGLE_MAP_API_KEY }}
+env:
+  VITE_OPEN_WEATHER_API_KEY: ${{ secrets.VITE_OPEN_WEATHER_API_KEY }}
 
 jobs:
   deploy:
