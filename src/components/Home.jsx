@@ -10,7 +10,7 @@ export const Home = () => {
     return (
         <div className="container">
             {gameStarted ? (
-                <Playground/>
+                <Playground />
             ) : (
                 <button className="btn" onClick={handleGameStarted}>Start Game</button>
             )}

@@ -1,21 +1,12 @@
 import { useMemo, useState } from "react";
 import citiesData from "../cities.json";
-
-function getRandomElements(arr, count = 5) {
-    let arrayCopy = arr.slice();
-
-    for (let i = arrayCopy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arrayCopy[i], arrayCopy[j]] = [arrayCopy[j], arrayCopy[i]];
-    }
-
-    return arrayCopy.slice(0, count);
-}
+import { getRandomElements, createGameHash } from "../utils/index.js";
 
 export const usePlayground = () => {
+    const [gameHash, setGameHash] = useState(createGameHash());
     const cities = useMemo(() => {
-        return getRandomElements(citiesData, 5);
-    }, []);
+        return getRandomElements(citiesData);
+    }, [gameHash]);
     const [currentCityIndex, setCurrentCityIndex] = useState(0);
     const [showResult, setShowResult] = useState(false);
     const [userAnswers, setUserAnswers] = useState([]);
@@ -39,16 +30,17 @@ export const usePlayground = () => {
             setShowResult(true);
         }
     }
-    // TODO: play again button
     const playAgain = () => {
         setShowResult(false)
         setCurrentCityIndex(0);
         setUserAnswers([]);
+        setGameHash(createGameHash);
     }
 
     return {
         hasMore,
         goForward,
+        playAgain,
         showResult,
         userAnswers,
         currentCity: cities[currentCityIndex]
