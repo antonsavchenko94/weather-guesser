@@ -7,6 +7,7 @@ export const Playground = () => {
     const {
         hasMore,
         goForward,
+        playAgain,
         showResult,
         userAnswers,
         currentCity,
@@ -35,7 +36,7 @@ export const Playground = () => {
 
                 </>
             ) : (
-                <Score userAnswers={userAnswers}/>
+                <Score userAnswers={userAnswers} playAgain={playAgain}/>
             )}
         </div>
     );

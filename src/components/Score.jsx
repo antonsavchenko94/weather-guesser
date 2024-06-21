@@ -1,7 +1,7 @@
 import React from 'react';
 import { useScore } from "../hooks/useScore.js";
 
-export const Score = ({ userAnswers }) => {
+export const Score = ({ userAnswers, playAgain }) => {
     const { guessedNumber, userScore} = useScore(userAnswers);
 
     return (
@@ -9,6 +9,7 @@ export const Score = ({ userAnswers }) => {
             {userScore.length > 0 ? (
                 <>
                     <h2>Score {guessedNumber}</h2>
+                    <p>{`You ${guessedNumber > 2 ? 'win' : 'lost'}`}</p>
                     <ul className="results">
                         {
                             userScore.map((score) => (
@@ -18,9 +19,9 @@ export const Score = ({ userAnswers }) => {
                             ))
                         }
                     </ul>
-                    <button className="btn">Play again</button>
+                    <button className="btn" onClick={playAgain}>Play again</button>
                 </>
-            ) : 'loading'}
+            ) : 'loading...'}
         </div>
     );
 };
