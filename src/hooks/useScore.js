@@ -1,9 +1,9 @@
-import {useEffect, useMemo, useState} from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const fetchRealWeatherData = async (city) => {
     const { lat, lng } = city;
     return fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=b355db3a8217ae32abe405b8021b20a5`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${import.meta.env.VITE_OPEN_WEATHER_API_KEY}`
     )
         .then(response => response.json())
         .then(data => {

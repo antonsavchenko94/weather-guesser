@@ -1,5 +1,5 @@
 import React from 'react';
-import {useScore} from "../hooks/useScore.js";
+import { useScore } from "../hooks/useScore.js";
 
 export const Score = ({ userAnswers }) => {
     const { guessedNumber, userScore} = useScore(userAnswers);
