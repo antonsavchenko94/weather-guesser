@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   release:
+    environment:
+      name: test-semantic-release
     name: Release
     runs-on: ubuntu-latest
     permissions:
