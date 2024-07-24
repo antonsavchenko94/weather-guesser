@@ -1,19 +1,18 @@
 name: Release
-
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - master # or main
       - stage
       - edge
-      - main
 
 permissions:
   contents: read # for checkout
 
 jobs:
   release:
+    environment:
+      name: test-semantic-release
     name: Release
     runs-on: ubuntu-latest
     permissions:
@@ -21,7 +20,6 @@ jobs:
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
-    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout
         uses: actions/checkout@v3
