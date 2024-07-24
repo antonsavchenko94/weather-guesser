@@ -1,0 +1,13 @@
+{
+  "branches": [
+    "master",
+    {
+      "name": "stage",
+      "prerelease": true
+    },
+    {
+      "name": "edge",
+      "prerelease": true
+    }
+  ]
+}
